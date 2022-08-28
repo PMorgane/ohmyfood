@@ -1,0 +1,14 @@
+{
+  "name": "sassworkshop",
+  "version": "1.0.0",
+  "description": "Mon projet 3 Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "saas": "^1.0.0"
+  }
+}
