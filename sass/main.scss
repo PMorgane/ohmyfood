@@ -1,52 +1,9 @@
-@import "./base.scss";
-@import "./layout/header.scss";
+@use "./base.scss";
 
-main .city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #F3F3F3;
-    text-align: center;
-    padding: 0.5rem;
-
-}
-
-main .city i {
-    font-size: 1.5rem;
-}
-
-/*explorer*/
-.explorer {
-    text-align: center;
-}
-
-.explorer h3 {
-    margin-top: 2rem;
-    font-size: 2rem;
-}
-
-.explorer p {
-    font-size: 1rem;
-}
-
-.explorer button {
-    color: white;
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 2px 1px 8px -3px #000000;
-    transition: transform 200ms;
-    margin-top: 0.5rem;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 321, 218, 0.9));
-}
-
-.explorer button:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
-}
-
-
+@use "./layout/header.scss";
+@use "./layout/city.scss";
+@use "./layout/explorer.scss";
+@use "./layout/filtre.scss";
+@use "./layout/cards.scss";
+@use "./layout/footer.scss";
 /*# sourceMappingURL=style.css.map */

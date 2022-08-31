@@ -1,0 +1,56 @@
+@use "../utils/box-shadow.scss";
+@use "../utils/zoom.scss";
+@use "../utils/variable.scss";
+@use "../utils/color.scss";
+
+
+.filtre {
+    counter-reset: steps;
+    margin-bottom: 2rem;
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style: none;
+        @media (max-widh:1000px) {
+            ul {
+                flex-direction: column;
+            }
+        }
+        
+    }
+    & li {
+        position: relative;
+        &::before {
+            content:""counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: color.$purple;
+            width: 2 * variable.$base-height;
+            height: 2 * variable.$base-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50%;
+            left:-1* variable.$base-height;
+            transform: translateY(50%);
+        }
+        background-color: #f6f6f6;
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include box-shadow.base-shadow;
+        &:hover {
+            @include zoom.transform-zoom;
+    }
+        & i.fas {
+            margin-right: 1rem ;
+            color: color.$lightgrey;
+            font-size: 1.5rem;
+        
+    }
+
+}
+}

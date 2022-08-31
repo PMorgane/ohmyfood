@@ -1,0 +1,70 @@
+@use "../utils/variable.scss";
+@use "../utils/color.scss";
+
+.cards {
+    background-color:#f6f6f6;
+    padding-bottom: 2rem;
+    h2 {
+        padding-top:20px;
+    }
+
+    .cards_acceuil {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr) ;
+        gap: 2rem; 
+        @media (max-width: variable.$breakpoint) {
+            grid-template-columns: repeat(1, 1fr);;
+        }          
+        }
+        .new {
+            position: relative;
+
+        }
+        .new::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "Nouveau";
+            position:absolute;
+            height: 2rem;
+            width: 5rem;
+            top: 20px;
+            right: 20px;
+            background-color: color.$color-tertiary;
+            color: darken(color.$color-tertiary,50%);
+        
+        }
+
+   
+        .card {
+            &_image {
+                border-radius: 1rem 1rem 0 0;
+                height:15rem;
+                background-size:cover;
+            }
+            @for $i from 1 through 4 {
+                &_image-#{$i} {
+                    background-image: url("../../assets/card_acceuil#{$i}.jpg");
+                }
+            }
+            &_description {
+                position: relative;
+                background-color:white;
+                border-radius: 0 0 1rem 1rem;
+            }
+            
+            h3, 
+            p {
+                padding: 0.4rem;
+        
+            }
+            i {
+                font-size: 2rem;
+                position: absolute;
+                right: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+                
+            }
+    }
+ }
