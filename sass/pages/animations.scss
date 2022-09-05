@@ -1,0 +1,22 @@
+@use "../utils/color.scss";
+@use "../utils/mixins.scss";
+
+@keyframes move {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.items {
+    animation: move 3s ease;
+    animation-fill-mode: backwards;
+    @for $i from 1 through 5{
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms*$i;
+        }
+    }
+}

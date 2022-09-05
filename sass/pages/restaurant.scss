@@ -1,0 +1,147 @@
+@use "../components/button.scss";
+@use "../utils/color.scss";
+@use "../utils/mixins.scss";
+@use "../utils/variable.scss";
+
+header {
+    h1 {
+    font-weight: 400;
+    margin: 0;
+    }
+    i {
+        font-weight: 900;
+        font-size: 25px;
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}
+
+img {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.container {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    @media (max-width: variable.$breakpoint) {
+        flex-direction: column;
+     } 
+    .menus {
+        width: 33%;
+        padding: 0 15px;
+        @media (max-width: variable.$breakpoint) {
+           width:100%;
+        } 
+        &__category {
+            font-weight: 400;
+            padding-left: 15px;
+            text-transform: uppercase;
+            margin-top: 35px;
+        }
+    }
+}
+
+.title-restaurant{
+    margin-top: -40px;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 35px 35px 0 0;
+    @include mixins.icon-heart;
+    & > h2 {
+        font-weight: 400;
+        font-family: "shrikhand",cursive;
+        padding: 15px;
+        font-size: 1.2rem;
+        
+    }
+    
+    
+}
+.items {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    height: 85px;
+    overflow: hidden;
+    @include mixins.base-shadow;
+    &__description {
+        margin: 0;
+        padding-left: 10px;
+        flex-grow: 1;
+        h4 {
+            margin: 0 0 10px 0;
+        }
+    }
+    &__tarifs {
+        margin:0 30px 0 0;
+        font-weight: bold;
+    }
+}
+.menus__category {
+        & > h3 {
+        padding-bottom: 20px;
+        position: relative;
+        font-weight: 400;
+        &::after {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            content: "";
+            height: 3px;
+            width: 40px;
+            background-color: color.$color-tertiary;
+        }
+    }
+}
+
+.button-block{
+    background-color:#f6f6f6;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 50px 0;
+    .button-btn {
+    @include button.button;
+}}
+
+.img-heading {
+    & > img  {
+        height: 60vh;
+        width: 100%;
+        object-fit: cover;
+
+    }
+    
+}/*
+.img-heading {
+    position: relative;
+    top: 35px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    & .title-restaurant {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50px 50px 0 0;
+    height: 40px;
+    width:100%;
+    background-color: color.$lightgrey;
+    }
+    & h2 {
+        padding: 20px 0 0 30px;
+        font-size: 1rem;
+    }
+    */

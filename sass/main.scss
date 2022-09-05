@@ -1,9 +1,16 @@
 @use "./base.scss";
 
+@use "./components/button.scss";
+
 @use "./layout/header.scss";
 @use "./layout/city.scss";
 @use "./layout/explorer.scss";
 @use "./layout/filtre.scss";
 @use "./layout/cards.scss";
 @use "./layout/footer.scss";
+
+@use "./pages/animations.scss";
+@use "./pages/check-box.scss";
+@use "./pages/restaurant.scss";
+
 /*# sourceMappingURL=style.css.map */
