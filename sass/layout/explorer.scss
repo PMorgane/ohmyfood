@@ -1,4 +1,4 @@
-@use "../utils/box-shadow.scss";
+@use "../components/buttons.scss";
 @use "../utils/mixins.scss";
 
 /*explorer*/
@@ -12,6 +12,6 @@
     font-size: 1rem;
     }
     & button {
-   @include mixins.button;
+    @include buttons.button;
     cursor: pointer;}
 }

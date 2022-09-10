@@ -4,9 +4,9 @@
 
 
 .loader {
-    background-color:color.$color-tertiary;
     position: fixed;
     inset:0;
+    z-index: 900;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,14 +15,17 @@
     animation: loading 3s ease-in-out;
     animation-fill-mode: forwards;
     transition: opacity 0.75s, visibility 0.75s;
-}
+}   
+.loader__back {
+        background-color:color.$color-tertiary;
+    }
+
 
 .loader::after {
     content: "";
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    
     border: 15px solid white;
     border-top-color: color.$color-footer ;
     
@@ -43,14 +46,15 @@
         transform: rotate(280deg); }
         
     99% {opacity: 0; transform: scale(1);}
-    100% {opacity: 0;
-        transform: scale(0);
-        transform: rotate(360deg);
+    100% {opacity: 0;transform: scale(0);
+        
         }
 }
+@keyframes loader__back {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 
-    
-    
+}
 /*.spinner {
     position: relative;
     width: 100px;
