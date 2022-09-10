@@ -11,10 +11,19 @@
         opacity: 1;
     }
 }
+.menus {
+    animation: move 3s ease;
+    animation-fill-mode: forwards;
+    @for $a from 1 through 5 {
+        &:nth-child(#{$a}) {
+            animation-delay: 300ms*$a;
+        }
+    }
+}
 .items {
     animation: move 3s ease;
-    animation-fill-mode: backwards;
-    @for $i from 1 through 5{
+    animation-fill-mode: forwards;
+    @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms*$i;
         }

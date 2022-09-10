@@ -1,4 +1,4 @@
-@use "../components/button.scss";
+@use "../components/buttons.scss";
 @use "../utils/color.scss";
 @use "../utils/mixins.scss";
 @use "../utils/variable.scss";
@@ -107,13 +107,13 @@ img {
     }
 }
 
-.button-block{
+.button-block {
     background-color:#f6f6f6;
     display: flex;
     justify-content: center;
     padding: 20px 0 50px 0;
     .button-btn {
-    @include button.button;
+    @include buttons.button;
 }}
 
 .img-heading {

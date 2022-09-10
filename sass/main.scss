@@ -1,6 +1,6 @@
 @use "./base.scss";
 
-@use "./components/button.scss";
+@use "./components/buttons.scss";
 
 @use "./layout/header.scss";
 @use "./layout/city.scss";
@@ -9,6 +9,7 @@
 @use "./layout/cards.scss";
 @use "./layout/footer.scss";
 
+@use "./pages/loader.scss";
 @use "./pages/animations.scss";
 @use "./pages/check-box.scss";
 @use "./pages/restaurant.scss";
