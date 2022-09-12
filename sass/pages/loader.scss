@@ -3,7 +3,7 @@
 @use "../utils/color.scss";
 
 
-.loader {
+.loader, .loader__back {
     position: fixed;
     inset:0;
     z-index: 900;
@@ -12,16 +12,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loading 3s ease-in-out;
+    animation: loading__back 3s linear;
     animation-fill-mode: forwards;
+    background-color:color.$color-tertiary;
     transition: opacity 0.75s, visibility 0.75s;
 }   
 .loader__back {
-        background-color:color.$color-tertiary;
+        
+    position: fixed;
+    inset:0;
+    z-index: 900;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading 3s linear;
+    animation-fill-mode: forwards;
+    transition: opacity 0.75s, visibility 0.75s;
     }
 
 
-.loader::after {
+.loader__back::after {
     content: "";
     width: 75px;
     height: 75px;
@@ -50,43 +62,22 @@
         
         }
 }
-@keyframes loader__back {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+@keyframes loading__back {
+    0% {opacity: 1;transform: scale(1);
+     }
+        
+    25% {opacity: 0.8;
+         }
+        
+    50% {opacity: 0.6;
+         }
+        
+    75% {opacity: 0.4;
+         }
+        
+    99% {opacity: 0; transform: scale(1);}
+    100% {opacity: 0;transform: scale(0);
+        
+        }
 
 }
-/*.spinner {
-    position: relative;
-    width: 100px;
-    height: 100px;
-}
-.spinner div {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    border: 8px solid transparent;
-    border-top-color: #ad60f5;
-    border-radius: 50%;
-    animation: spinnerOne 3s linear;
-    animation-fill-mode: forwards;
-    display: grid;
-    place-items: center;
-}
-.spinner div:nth-child(2) {
-    border: 8px solid transparent;
-    animation: spinnerTwo 3s linear;
-}
-
-@keyframes spinnerOne {
-    0% {transform: rotate(0deg) translateY(1) scale(1); border-width: 10px;}
-    50% {transform: rotate(360deg) translateY(0.5); border-width: 1px;}
-    100% {transform: rotate(600deg) translateY(0) scale(0); border-width: 10px;}
-} 
-@keyframes spinnerTwo {
-    0% {transform: rotate(0deg) translateY(1) scale(1); border-width: 1px;}
-    50% {transform: rotate(360deg) translateY(0.5); border-width: 10px;}
-    100% {transform: rotate(600deg) translateY(0) scale(0); border-width: 1px;}
-}  */
-

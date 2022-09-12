@@ -43,7 +43,7 @@ img {
         } 
         &__category {
             font-weight: 400;
-            padding-left: 15px;
+            padding-left: 5px;
             text-transform: uppercase;
             margin-top: 35px;
         }
@@ -81,7 +81,12 @@ img {
         margin: 0;
         padding-left: 10px;
         flex-grow: 1;
-        h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        h4, p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             margin: 0 0 10px 0;
         }
     }
@@ -124,24 +129,4 @@ img {
 
     }
     
-}/*
-.img-heading {
-    position: relative;
-    top: 35px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-
-    & .title-restaurant {
-    position: absolute;
-    bottom: 0;
-    border-radius: 50px 50px 0 0;
-    height: 40px;
-    width:100%;
-    background-color: color.$lightgrey;
-    }
-    & h2 {
-        padding: 20px 0 0 30px;
-        font-size: 1rem;
-    }
-    */
+}
