@@ -14,7 +14,10 @@
     font-size: 1rem;
     padding-bottom: 1rem;
     }
-    & button {
-    @include buttons.button;
-    cursor: pointer;}
+
+}
+.explorer button {
+        @include buttons.button;
+        cursor: pointer; 
+       
 }

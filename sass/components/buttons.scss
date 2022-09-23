@@ -13,8 +13,9 @@
     cursor: pointer;
     background-image: linear-gradient(to top,#9356DC,#FF79DA);
     @include mixins.base-shadow;
-    & button:hover {
-        transform: scale(1.02);
-        opacity: 0.9;
-    }
+    &:hover {
+        filter: brightness(1.5); 
+        @include mixins.dark-shadow;
+
+    }      
 }

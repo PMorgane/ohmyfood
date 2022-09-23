@@ -4,6 +4,9 @@
 @mixin base-shadow {
     box-shadow: 2px 1px 8px -3px #000000;
 }
+@mixin dark-shadow {
+    box-shadow: 4px 1px 10px -1px #000000;
+}
 @mixin gradient($opacity:0.9) {
     background-image: linear-gradient(to top, rgba(147, 121, 218, $opacity), rgba(255, 121, 218, $opacity));
 }

@@ -65,6 +65,7 @@ header {
   font-size: 1rem;
   padding-bottom: 1rem;
 }
+
 .explorer button {
   color: white;
   font-weight: 300;
@@ -79,9 +80,9 @@ header {
   box-shadow: 2px 1px 8px -3px #000000;
   cursor: pointer;
 }
-.explorer button button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.explorer button:hover {
+  filter: brightness(1.5);
+  box-shadow: 4px 1px 10px -1px #000000;
 }
 
 .filtre {
@@ -615,9 +616,9 @@ img {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 2px 1px 8px -3px #000000;
 }
-.button-block .button-btn button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.button-block .button-btn:hover {
+  filter: brightness(1.5);
+  box-shadow: 4px 1px 10px -1px #000000;
 }
 
 .img-heading > img {
