@@ -55,13 +55,17 @@ img {
     background-color: #f6f6f6;
     position: relative;
     border-radius: 35px 35px 0 0;
-    @include mixins.icon-heart;
+    
     & > h2 {
         font-weight: 400;
         font-family: "shrikhand",cursive;
         padding: 15px;
         font-size: 1.2rem;
         
+    }
+    .coeur {
+        @include mixins.icon-heart;
+        cursor: pointer;
     }
     
     

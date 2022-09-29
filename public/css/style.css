@@ -223,7 +223,14 @@ header {
   padding: 10px 5px;
   position: relative;
 }
-.cards .card__description::before {
+.cards .card__description:hover::after {
+  transform: translateY(-50%) scale(1.1);
+}
+.cards .card h3,
+.cards .card p {
+  padding: 0.3rem;
+}
+.cards .coeur::before {
   color: black;
   display: inline-block;
   font-style: normal;
@@ -242,7 +249,7 @@ header {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.cards .card__description::after {
+.cards .coeur::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -263,15 +270,8 @@ header {
   color: transparent;
   font-weight: 900;
 }
-.cards .card__description:hover::after {
+.cards .coeur:hover::after {
   opacity: 1;
-}
-.cards .card__description:hover::after {
-  transform: translateY(-50%) scale(1.1);
-}
-.cards .card h3,
-.cards .card p {
-  padding: 0.3rem;
 }
 
 footer {
@@ -518,7 +518,16 @@ img {
   position: relative;
   border-radius: 35px 35px 0 0;
 }
-.title-restaurant::before {
+.title-restaurant > h2 {
+  font-weight: 400;
+  font-family: "shrikhand", cursive;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+.title-restaurant .coeur {
+  cursor: pointer;
+}
+.title-restaurant .coeur::before {
   color: black;
   display: inline-block;
   font-style: normal;
@@ -537,7 +546,7 @@ img {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.title-restaurant::after {
+.title-restaurant .coeur::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -558,14 +567,8 @@ img {
   color: transparent;
   font-weight: 900;
 }
-.title-restaurant:hover::after {
+.title-restaurant .coeur:hover::after {
   opacity: 1;
-}
-.title-restaurant > h2 {
-  font-weight: 400;
-  font-family: "shrikhand", cursive;
-  padding: 15px;
-  font-size: 1.2rem;
 }
 
 .items {
