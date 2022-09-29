@@ -22,6 +22,7 @@
         
     }
     & li {
+        cursor: pointer;
         position: relative;
         font-weight: 590;
         background-color: #f6f6f6;
@@ -48,13 +49,14 @@
         
         &:hover {
             @include mixins.transform-zoom;
-    }
+            @include mixins.dark-shadow;
+        }
         & i.fas {
             margin: 1rem ;
             color: grey;
             font-size: 1.5rem;
         
-    }
+         }
 
 }
 }

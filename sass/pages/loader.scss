@@ -16,23 +16,15 @@
     animation-fill-mode: forwards;
     background-color:color.$color-tertiary;
     transition: opacity 0.75s, visibility 0.75s;
-}   
+}   /*Fond du spinner */ 
 .loader__back {
-        
-    position: fixed;
-    inset:0;
-    z-index: 900;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     animation: loading 3s linear;
     animation-fill-mode: forwards;
     transition: opacity 0.75s, visibility 0.75s;
     }
+    
 
-
+/*spinner*/
 .loader__back::after {
     content: "";
     width: 75px;
@@ -42,6 +34,7 @@
     border-top-color: color.$color-footer ;
     
 }
+/*disparition et rotation du spinner*/
 @keyframes loading {
     
     

@@ -49,20 +49,23 @@ img {
         }
     }
 }
-
+/*coeur*/
 .title-restaurant{
     margin-top: -40px;
     background-color: #f6f6f6;
     position: relative;
     border-radius: 35px 35px 0 0;
-    @include mixins.icon-heart;
+   
     & > h2 {
         font-weight: 400;
         font-family: "shrikhand",cursive;
         padding: 15px;
         font-size: 1.2rem;
         
-    }
+    }/*
+    & > i {
+        @include mixins.icon-heart;
+    }*/
     
     
 }
@@ -77,6 +80,7 @@ img {
     height: 85px;
     overflow: hidden;
     @include mixins.base-shadow;
+   /*rogner le texte pour le check */
     &__description {
         margin: 0;
         padding-left: 10px;
@@ -95,6 +99,7 @@ img {
         font-weight: bold;
     }
 }
+/*soulignement des titres*/
 .menus__category {
         & > h3 {
         padding-bottom: 20px;
@@ -111,7 +116,7 @@ img {
         }
     }
 }
-
+/*Boutton*/
 .button-block {
     background-color:#f6f6f6;
     display: flex;

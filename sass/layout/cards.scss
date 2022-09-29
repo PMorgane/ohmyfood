@@ -59,7 +59,7 @@
                 border-radius: 1rem 1rem 0 0;
                 background-size:cover;
             }
-            @for $i from 1 through 4 {
+            @for $i from 1 through 5 {
                 &__image-#{$i} {
                     background-image: url("../../assets/card_acceuil#{$i}.jpg");
                 }

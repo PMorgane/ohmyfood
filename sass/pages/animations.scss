@@ -11,6 +11,7 @@
         opacity: 1;
     }
 }
+/*entrée plat et dessert arrivent à la suite*/
 .menus {
     animation: move 3s ease;
     animation-fill-mode: forwards;
@@ -20,9 +21,10 @@
         }
     }
 }
+/* arrive les un a la suite des autres*/
 .items {
     animation: move 3s ease;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;/*arrêt dernière position*/
     @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms*$i;

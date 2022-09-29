@@ -1,6 +1,6 @@
 @use "../utils/color.scss";
 @use "../utils/mixins.scss";
-
+/* boite verte*/
 .check {
     height: 100%;
     background-color: color.$color-tertiary;
@@ -19,12 +19,12 @@
         display: grid;
     place-items: center;
     }
-}
+}/* check box*/
 .items {
     &:hover {
         i {
-            @include mixins.check-turn;
-            animation: check-turn 1s ease-in-out;
+          @include mixins.check-turn;
+          animation: check-turn 0.5s ease-in-out;
         }
         
         .check {

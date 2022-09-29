@@ -10,6 +10,7 @@
 @mixin gradient($opacity:0.9) {
     background-image: linear-gradient(to top, rgba(147, 121, 218, $opacity), rgba(255, 121, 218, $opacity));
 }
+/*coeur*/
 @mixin heart ($opacity: 1, $font-weight: 400)
     {
         display:inline-block;
@@ -36,7 +37,7 @@
     }
     &::after {
         @include heart($opacity:0);
-        @include gradient;
+        @include gradient($opacity:1);
         color: transparent;
         font-weight: 900;
     }
@@ -44,6 +45,7 @@
         opacity: 1;
     }
 }
+/*rotation du check*/
 @mixin check-turn {
     @keyframes check-turn {
         0%{transform:rotate(-270deg) ;}
